@@ -1,13 +1,25 @@
-#ifndef MINI_TALK_H
-#define MINI_TALK_H
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   minitalk.h                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nkarabul <nkarabul@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/07 19:46:34 by nkarabul          #+#    #+#             */
+/*   Updated: 2024/02/10 16:29:08 by nkarabul         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#define BRED "\e[1;31m"
-#define BGRN "\e[1;32m"
-#define BYEL "\e[1;33m"
-#define BCYN "\e[1;36m"
-#define COLOR_RESET "\e[0m"
+#ifndef MINITALK_H
+# define MINITALK_H
 
-#include "libft/libft.h"
-#include <signal.h>
+# include "ft_printf/ft_printf.h"
+# include <stdlib.h>
+# include <signal.h>
+
+void	sendchar_to_server(int pid_id, char msj);
+int		ft_atoi(const char *str);
+void	handler(int signal);
+void	terminal(int pid);
 
 #endif
